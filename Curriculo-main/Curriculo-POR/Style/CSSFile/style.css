@@ -1,0 +1,866 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 100%, rgb(255, 255, 255) 100%);
+}
+
+/*BANER*/
+
+header {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-wrapper{
+  width: 99vw;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.img-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  animation: zoom 25s;
+}
+
+@keyframes zoom {
+  0%{
+      transform: scale(1.3);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+
+.baner{
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+
+.baner p{
+  color: #ffffff;
+  font-size: 2em;
+  font-family: "Baloo Da 2", serif;
+  font-weight: 200;
+  text-shadow: .3rem, .4rem 2px rgba(0, 0, 0, .4);
+  line-height: 3.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: moveBaner 1s 0.5s forwards;
+}
+
+.baner p {
+  font-family: "Josefin Slab", serif;
+  color: #fff;
+  font-size: 1.5em;
+  text-shadow: .2rem, .2rem rgba(0, 0, 0, .4);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: moveBaner 1s 0.7s forwards;
+}
+
+.baner button{
+  font-family: "Muli", serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  background: #4b4b4b;
+  background: -webkit-linear-gradient(to right, #4b4b4b);  
+  background: linear-gradient(to right, #4b4b4b, #000000);
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+  animation: moveBaner 1s 0.9s forwards;
+}
+
+@keyframes moveBaner {
+  0%{
+      transform: translateY(10rem) rotateY(-30deg); 
+  }
+  100%{
+      transform: translateY(0) rotateY(0);
+      opacity: 1;
+  }
+}
+
+.baner button:hover {
+  opacity: 0.8;
+  color: #000;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper{
+    width: 99vw;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    animation: zoom 25s;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.baner{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.baner h1{
+    color: #ffffff;
+    font-size: 2em;
+    font-family: "Baloo Da 2", serif;
+    font-weight: 200;
+    text-shadow: .3rem, .4rem 2px rgba(0, 0, 0, .4);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBaner 1s 0.5s forwards;
+}
+
+.baner p {
+    font-family: "Josefin Slab", serif;
+    color: #fff;
+    font-size: 1.5em;
+    text-shadow: .2rem, .2rem rgba(0, 0, 0, .4);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBaner 1s 0.7s forwards;
+}
+
+.baner button{
+    font-family: "Muli", serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background: #4b4b4b;
+    background: linear-gradient(
+    90deg,rgb(1, 13, 3) 20%,
+  rgb(15, 87, 10) 40%,
+  rgb(17, 255, 0) 100%);
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBaner 1s 0.9s forwards;
+}
+
+@keyframes moveBaner {
+    0%{
+        transform: translateY(10rem) rotateY(-30deg); 
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+.baner button:hover {
+    opacity: 0.8;
+    color: #000;
+}
+
+/*Menu*/
+
+.h-menu {
+    width: 2em;
+    height: 2em;
+    position: fixed;
+    z-index: 100;
+    right: 2em;
+    top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: 1s;
+}
+
+.show-menu .h-menu {
+    right: 14rem;
+}
+
+.show-menu #line1 {
+    position: relative;
+    width: 55%;
+    left: .7em;
+    top: .2em;
+    transform: rotate(29deg) translate(.1rem);
+}
+
+.show-menu #line2 {
+    width: 85%;
+}
+
+.show-menu #line3 {
+    position: relative;
+    width: 50%;
+    left: .9em;
+    bottom: .2em;
+    transform: rotate(-29deg) translate(-.1rem);
+
+}
+
+.sidebar{
+    width: 16rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+
+}
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-link {
+    font-family: "Baloo Da 2", serif;
+    font-size: 2rem;
+    color: #000000;
+    transition: color 0.2s;
+}
+
+.menu-link:hover {
+    color: #4b4b4b;
+}
+
+.icons-menu-div {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 380px;
+    
+}
+
+.whatsapp {
+  transition: all .5s;
+  border: none;
+}
+
+.whatsapp:hover {
+  border: 3px solid #3ee857;
+   border-radius: 50%;
+  -webkit-filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  -webkit-transform: rotateZ(-360deg) scale(1.5);
+  transform: rotateZ(-360deg) scale(1.5);
+}
+
+.github {
+  transition: all .5s;
+  border: none;
+}
+
+.github:hover {
+  border: 3px solid #000;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  -webkit-transform: rotateZ(-360deg) scale(1.5);
+  transform: rotateZ(-360deg) scale(1.5);
+}
+
+.linkedin {
+ transition: all .5s;
+ border: none;
+}
+
+.linkedin:hover {
+  border: 3px solid #3579c7;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 7px 1px rgba(0,0,0,.5));
+  -webkit-transform: rotateZ(-360deg) scale(1.5);
+  transform: rotateZ(-360deg) scale(1.5);    
+}
+
+/*Baner de informações*/
+
+.section-p p{
+  text-align: center;
+  position: relative;
+  line-height: 4rem;
+  top: .1rem;
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+.section-p {
+position: relative;
+margin: auto;
+color: #fff;
+background: linear-gradient(
+90deg,rgb(1, 13, 3) 20%,
+rgb(15, 87, 10) 40%,
+rgb(17, 255, 0) 100%);
+width: 100%;
+height: 82vh;
+max-width: 65%;
+top: 10rem;
+border-radius: 10px;
+}
+
+
+.section-p p::after{
+content: '|';
+margin-left: 5px;
+opacity: 1;
+animation: pisca .2s infinite;
+    
+}
+
+.decoration img {
+    width: 35%;
+    height: 35%;
+    position: relative;
+    float: left;
+    top: 1em;
+}
+
+@keyframes pisca {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+/*Menu de Informações*/
+
+#material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 32px;  
+  display: inline-block;
+  color:rgb(4, 4, 4);
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+ -moz-osx-font-smoothing: grayscale;
+ font-feature-settings: 'liga';
+}
+.menu-informação{
+  position:absolute;
+  top:123%;
+  left:0;
+  bottom:0;
+  right:0;
+  margin:auto;
+  width:600px;
+  height:200px;
+}
+.menu-informação input
+{
+  position:absolute;
+  top: 0%;
+  left:50%;
+  width:80px;
+  height:80px;
+  z-index:20;
+  border-radius: 80px;
+  opacity:0;
+  cursor:pointer;
+}
+.hamburger
+{
+  position:absolute;
+  top:0%;
+  left:50%;
+  width: 80px;
+  height:80px;
+  background: linear-gradient(
+  90deg,rgb(1, 13, 3) 20%,
+rgb(15, 87, 10) 40%,
+ rgb(17, 255, 0) 100%);
+  border-radius:100%;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  z-index:10;
+  cursor:pointer;
+}
+.pontos span
+{
+  position: absolute;
+  top: 45%;
+  width:8px;
+  height:8px;
+  border-radius:8px;
+  background:#fff;
+  z-index:20;
+    transition: all .3s ease-in-out;
+}
+
+.primeiro
+{
+  margin-left:1em;
+}
+.segundo
+{
+  
+  margin-left:2.3em;
+}
+.terceiro
+{
+   margin-left:3.6em;
+}
+.menu-informação input:checked ~ .hamburger .pontos .primeiro
+{
+ top:20px;
+  height:60px;
+  transform-origin:top;
+  transform:rotate(-45deg);
+   transition: all .3s ease-in-out;
+  
+}
+.menu-informação input:checked ~ .hamburger .pontos .terceiro
+{
+ top:20px;
+  height:60px;
+  transform-origin:top;
+  transform:rotate(45deg);
+   transition: all .3s ease-in-out;
+}
+.ação_items_bar
+{
+  position:absolute;
+  top:4.5%;
+  left:-43%;
+  width: 70rem;
+  height:60px;
+  background: linear-gradient(
+  90deg,rgb(1, 13, 3) 20%,
+rgb(15, 87, 10) 40%,
+rgb(17, 255, 0) 100%);
+  border-radius:60px;
+  box-shadow: 0px 5px 20px #F19181;
+  z-index:5;
+  transform:scaleX(0);
+  transition: all .3s ease-in-out;
+}
+.menu-informação input:checked ~ .ação_items_bar
+{
+  transform:scaleX(1);
+}
+.ação_items span
+{
+  position: absolute;
+  top: 25%;
+  width:20px;
+  padding-left:35px;
+  opacity:0;
+  transition: all .2s ease-in-out;
+  cursor:pointer; 
+}
+.primeiro_item
+{
+  left:0%;
+}
+.segundo_item
+{
+  left:15%;
+}
+.terceiro_item
+{
+  left:55%;
+}
+.quarto_item
+{
+  left:70%;
+}
+.menu-informação input:checked ~ .ação_items_bar .ação_items .primeiro_item
+{
+    opacity:1;
+  transition-delay:.45s;
+}
+.menu-informação input:checked ~ .ação_items_bar .ação_items .segundo_item
+{
+    opacity:1;
+  transition-delay:.40s;
+
+}
+.menu-informação input:checked ~ .ação_items_bar .ação_items .terceiro_item
+{
+    opacity:1;
+  transition-delay:.40s;
+}
+.menu-informação input:checked ~ .ação_items_bar .ação_items .quarto_item
+{
+  opacity:1;
+  transition-delay:.45s;
+}
+
+.p-menu-informação {
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+/*Ocutar conteúdo*/
+
+.hidden {
+  display: none;
+  border-radius: 40px;
+}
+
+#btn {
+  background-color: #f47862;
+  font-size: 20px;
+  padding: 40px 240px 20px 20px;
+  position: relative;
+  right: 3rem;
+}
+
+.botao1 {
+  position: relative;
+  left: 4rem;
+  transition: all 0.5s;
+}
+
+.botao1:hover {
+  -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+}
+
+#btn2 {
+  background-color: #3142b3;
+  font-size: 15px;
+  padding: 40px 240px 20px 20px;
+  position: relative;
+  left: 3rem;
+}
+
+.botao2 {
+  position: relative;
+  left: 10rem;
+  transition: all 0.5s;
+}
+
+.botao2:hover {
+  -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+}
+
+#btn3 {
+  background-color: #ffff00;
+  color: #000;
+  font-size: 15px;
+  padding: 40px 110px 20px 20px;
+  padding: 40px 240px 20px 20px;
+  position: relative;
+  left: rem;
+
+}
+
+.botao3 {
+  position: relative;
+  left: 10rem;
+  transition: all 0.5s;
+}
+
+.botao3:hover {
+  -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+}
+
+#btn4 {
+  background-color: #3142b3;
+  font-size: 15px;
+  padding: 40px 110px 20px 20px;
+  position: relative;
+  left: 7rem;
+  padding: 40px 240px 20px 20px;
+  position: relative;
+  left: rem;
+}
+
+.botao4 {
+  position: relative;
+  left: 14rem;
+  transition: all 0.5s;
+}
+
+.botao4:hover {
+  -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+}
+
+/*PEOJETOS*/
+
+.sessao-projetos {
+  position: relative;
+  top: 50em;
+}
+
+.projetos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 20em;
+  height: 30em;
+  position: relative;
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #4b4b4b;
+  border-radius: 1rem;
+}
+
+.card-img-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  opacity: .8;
+  transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img {
+  opacity: .5;
+}
+
+.card-info {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  text-shadow: 0 0.2rem 0.3rem #000000;
+  transition: all .3s;
+}
+
+.card-info h2 {
+  font-family: "Josefin Slab", serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.card-info p{
+  font-family: "Baloo Da 2", serif;
+  color: #141111;
+  margin-bottom: 2rem;
+}
+
+.card-info button {
+      font-family: "Muli", serif;
+      font-size: .5rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      background: #4b4b4b;
+      background: -webkit-linear-gradient(to right, #4b4b4b);  
+      background: linear-gradient(to right, #4b4b4b, #000000);
+      width: 8rem;
+      height: 2.5rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0;
+      animation: moveBaner 1s 0.9s forwards;
+}
+
+
+.card-info button:hover {
+  color: #000;
+}
+
+.card:hover .card-info{
+  bottom: 2rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 1000px) {
+ 
+
+
+.baner{
+    position: absolute;
+    top: 6%;
+    left: 6%;
+}
+
+.baner h1{
+    color: #ffffff;
+    font-size: 1.2em;
+    font-family: "Baloo Da 2", serif;
+    font-weight: 200;
+    text-shadow: .3rem, .4rem 2px rgba(0, 0, 0, .4);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBaner 1s 0.5s forwards;
+}
+
+.baner p {
+    font-family: "Josefin Slab", serif;
+    color: #fff;
+    font-size: 1em;
+    text-shadow: .2rem, .2rem rgba(0, 0, 0, .4);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBaner 1s 0.7s forwards;
+}
+
+.baner button{
+    font-family: "Muli", serif;
+    font-size: .5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background: #4b4b4b;
+    background: -webkit-linear-gradient(to right, #4b4b4b);  
+    background: linear-gradient(to right, #4b4b4b, #000000);
+    padding: .6rem .5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBaner 1s 0.9s forwards;
+}
+
+
+    .img-wrapper{
+        width: 126vw;
+        height: 100%;
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    .sessao-projetos {
+        height: 115vh;
+    }
+
+    .card-info p{
+        font-family: "Baloo Da 2", serif;
+        color: #141111;
+        margin-bottom: 1rem;
+        font-size: 9px;
+    }
+
+    .card-info {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        top: -10px;
+        padding: 1rem;
+        text-shadow: 0 0.2rem 0.3rem #000000;
+        transition: all .3s;
+    }
+    
+    .card-info h2 {
+        font-family: "Josefin Slab", serif;
+        font-size: 1rem;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 2rem;
+    }
+    
+    .card-img-wrapper {
+        width: 80%;
+        height: 50%;
+        background-color: #4b4b4b;
+        border-radius: 1rem;
+        margin-left: 15px;
+    }
+    
+    .card-img-wrapper img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+        opacity: .8;
+        transition: opacity .3s;
+    }
+
+    .card-info button {
+        font-family: "Muli", serif;
+        font-size: .5rem;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        background: #4b4b4b;
+        background: -webkit-linear-gradient(to right, #e2e2e2);  
+        background: linear-gradient(to right, #afafaf, #000000);
+        width: 6rem;
+        height: 2.5rem;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0;
+        animation: moveBaner 1s 0.9s forwards;
+} 
+
+}
